@@ -1,0 +1,182 @@
+For this TD, you will configure a machine to join a Quorum private network following the documentation here http://docs.goquorum.com/en/latest/
+
+- SSH setup (2 pts)
+
+- UFW config (2 pts)
+
+- Installing dependencies (2 pts)
+
+- Installing Quorum (2 pts)
+
+- Connect Geth to our group's private network (2 pts)
+
+https://docs.goquorum.consensys.net/en/stable/Tutorials/Private-Network/Create-IBFT-Network/
+Genesis file and static-node.json file attached below
+
+- Deploy a contract (2 pts)
+
+- Installing Tessera (2 pts)
+
+- Configure Tessera (3 pts)
+
+- Create a private smart contract with
+
+LXPEzIq3GRMReDaKckedWHkuky52yj45yRou3YA6hkA=
+
+(3 pts)
+
+A few notes:
+
+Command "geth version" should display
+
+Geth
+
+Version: 1.9.24-stable
+
+Git Commit: d5ef77cafd90f4cf9aebfaddb745944e610de1ad
+
+Quorum Version: 21.7.1
+
+Architecture: amd64
+
+Protocol Versions: [65 64 63]
+
+Network Id: 1337
+
+Go Version: go1.15.5
+
+Operating System: linux
+
+GOPATH=
+
+GOROOT=go
+
+When initializing on our genesis file:
+
+INFO [10-01|13:48:34.601] Successfully wrote genesis state         database=lightchaindata hash="3b929b…b5ae7f"
+
+Make sure you use the correct folder to:
+
+- Initialize geth with geth init --datadir YOUR-FOLDER
+
+- Run PRIVATE_CONFIG=ignore nohup geth --datadir YOUR-FOLDER 
+
+- Place file static-nodes.json in YOUR-FOLDER/static-nodes.json
+
+Static-nodes.json details:
+
+[
+    "enode://7b8107a67d08a3ae7a2e830548704901ef237931ae5845ac89631b651e8250403df70dfc5933aec4e145ff2773ab3940c81e874aec4df235364b9efe53476911@mesifi590421-0000.westeurope.cloudapp.azure.com:30300?discport=0",
+    "enode://6a449d11d25324fbd11be7387fc92457164f6b896b2c92536a609d06c2426e6b28e9a6210aeef3b68b344714e9a9173be507c673e21cc104ed567cec7cee7034@mesifi590421-0000.westeurope.cloudapp.azure.com:30301?discport=0",
+    "enode://71cf53fe5af9f13c003ea0a604bf4dc4a5cfe4491b3a24ac899427d0a758d839b147d7cfbb93d136f28b3d062b11321cd4c0878e9fd496b5813aea05d836fa27@mesifi590421-0000.westeurope.cloudapp.azure.com:30302?discport=0",
+    "enode://0eefe55858494e21f761586b91a279310ac4e96cc9131f6c455f763f286eeaf5035024586444ed4e0c3c83d9e9548e68af6b00600f82b97d154ffd5d34b9ddee@mesifi590421-0000.westeurope.cloudapp.azure.com:30303?discport=0",
+    "enode://0724292cf5adf2fea5c330fd0b810134b550b076cf3793a035d8fbefb06f04f52991cf2cab467ac13433d6b3313a1fc497f6a5c9db5333176020c6b413e88028@mesifi590421-0000.westeurope.cloudapp.azure.com:30304?discport=0"
+]
+
+Genesis file:
+
+{
+
+    "config": {
+
+        "chainId": 10,
+
+        "homesteadBlock": 0,
+
+        "eip150Block": 0,
+
+        "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+
+        "eip155Block": 0,
+
+        "eip158Block": 0,
+
+        "byzantiumBlock": 0,
+
+        "constantinopleBlock": 0,
+
+        "petersburgBlock": 0,
+
+        "istanbulBlock": 0,
+
+        "istanbul": {
+
+            "epoch": 30000,
+
+            "policy": 0,
+
+            "ceil2Nby3Block": 0
+
+        },
+
+        "txnSizeLimit": 64,
+
+        "maxCodeSize": 0,
+
+        "qip714Block": 0,
+
+        "isMPS": false,
+
+        "isQuorum": true
+
+    },
+
+    "nonce": "0x0",
+
+    "timestamp": "0x6157105b",
+
+    "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000f8aff86994d9709e9ee4569777cad575edc63e0d10abeadcd19469415a7c783c493018102d73dea632f704b7e1bb94b74b7c3a2ce93d1a37b0a97230ae032f5ddffdff94077020a680ff82b49d20440fe7ab405991300dd094866793481891d6ea697372d832f564602f4eec4db8410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0",
+
+    "gasLimit": "0xe0000000",
+
+    "difficulty": "0x1",
+
+    "mixHash": "0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365",
+
+    "coinbase": "0x0000000000000000000000000000000000000000",
+
+    "alloc": {
+
+        "077020a680ff82b49d20440fe7ab405991300dd0": {
+
+            "balance": "0x446c3b15f9926687d2c40534fdb564000000000000"
+
+        },
+
+        "69415a7c783c493018102d73dea632f704b7e1bb": {
+
+            "balance": "0x446c3b15f9926687d2c40534fdb564000000000000"
+
+        },
+
+        "866793481891d6ea697372d832f564602f4eec4d": {
+
+            "balance": "0x446c3b15f9926687d2c40534fdb564000000000000"
+
+        },
+
+        "b74b7c3a2ce93d1a37b0a97230ae032f5ddffdff": {
+
+            "balance": "0x446c3b15f9926687d2c40534fdb564000000000000"
+
+        },
+
+        "d9709e9ee4569777cad575edc63e0d10abeadcd1": {
+
+            "balance": "0x446c3b15f9926687d2c40534fdb564000000000000"
+
+        }
+
+    },
+
+    "number": "0x0",
+
+    "gasUsed": "0x0",
+
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+
+}
+
+For Tessera to connect to the teacher's node:
+
+Add peer http://mesifi590421-0000.westeurope.cloudapp.azure.com:9001 in Tessera's config file

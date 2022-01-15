@@ -1,0 +1,20 @@
+These actions do not have to follow one another.
+
+- Cleaning up setup (2 pts)
+
+- Adapt UFW settings (2 pts)
+
+- Installing dependencies (2 pts)
+
+- Installing Geth (2 pts)
+
+- Running Geth on the rinkeby network (2 pts)
+
+- Turning Geth into a service (2 pts)
+
+- Open the RPC API to interact with your node (2 pts)
+
+- Connect to the Geth console and extract last block number (2 pts)
+
+Connect to the Geth console and show events data from a specific transaction (2 pts)
+- Configure truffle to deploy a smart contract through your node (2 pts)

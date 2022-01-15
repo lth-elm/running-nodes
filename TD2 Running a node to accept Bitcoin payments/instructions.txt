@@ -1,0 +1,23 @@
+For this TD you will run a BTC pay server on top of your previous node installation in order to accept payments, by following these tutorials :
+
+https://docs.btcpayserver.org/ManualDeployment/
+
+https://freedomnode.com/blog/114/how-to-setup-btc-and-lightning-payment-gateway-with-btcpayserver-on-linux-manual-install
+
+https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
+
+- Install dependencies (2 pts)
+
+- Adapt UFW config (2pts)
+
+- Adapt SSH config (2pts)
+
+- Install BTC Pay server (4 pts)
+
+- Configure your BTC Pay server (2 pts)
+
+- Install website / Wordpress (4 pts)
+
+- Create a button to pay with tBTC (2 pts)
+
+- Create a button to pay with lightning (2 pts)

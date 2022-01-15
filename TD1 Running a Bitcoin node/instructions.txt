@@ -1,0 +1,27 @@
+For this TD you will have to follow this tutorial, and adapt it to the VM you will be using:
+
+https://github.com/Stadicus/RaspiBolt
+
+- Setting up SSH properly (2pts)
+
+- Setting up UFW and Fail2Ban (2pts)
+
+- Installing Bitcoind (2pts)
+
+- Turning BitcoinD into a service (2 pts)
+
+- Creating a wallet and depositing tBTC in it (2 pts)
+
+- Installing LND (2 pts)
+
+- Turning LND into a service (2 pts)
+
+- Opening a lightning channel (2 pts)
+
+- Setting up Tor (2pts)
+
+- Running your own BTC explorer (2 pts)
+
+Teacher SSH public key:
+
+ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAhMgHGkNeWH+lhELCCsFxBV+lfuI5+jpH6w310xyHUOmlHd5c+6UJWHG4sq5BggdqifUTWqU0+oRntuR2d2ZWKhC1bc3hpMRWWTiDn2GZLCxCFoj7qJe40Btp3BV2DoMUt8QLNDy94QHDqBWmx/fGuS5pYFftCxEbYJxhDb+5y+r180pDnqXKmHPq8ioicLp4AfSdke9bK8ma009MZmrQSa1jBHcXnyOo0SeN5viFfxaz4Gg1OJ9x8tiGvcqhMhd3VYLlhtS9sMZ0gXF6On7sU0b9kNy5maxc93dyTQsemUDZqW/t1sgF6cRnEWb+xsCZRqNjEWu/u/b4H7cKTtG3XQ== key-esilv-mesimf-2020
